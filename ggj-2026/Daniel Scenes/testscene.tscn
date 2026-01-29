@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bs2add048q527"]
+
+[ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/draggable.tscn" id="1_bjxt1"]
+[ext_resource type="Script" uid="uid://cqvomwecam1b8" path="res://Daniel Scenes/testscene.gd" id="1_pd5uf"]
+
+[node name="Node2D" type="Node2D" unique_id=135135717]
+script = ExtResource("1_pd5uf")
+
+[node name="Draggable" parent="." unique_id=169746397 instance=ExtResource("1_bjxt1")]
+position = Vector2(262, 154)
+
+[node name="Draggable2" parent="." unique_id=979678123 instance=ExtResource("1_bjxt1")]
+position = Vector2(251, 153)
