@@ -1,13 +1,105 @@
 [gd_scene format=3 uid="uid://bs2add048q527"]
 
-[ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/draggable.tscn" id="1_bjxt1"]
-[ext_resource type="Script" uid="uid://cqvomwecam1b8" path="res://Daniel Scenes/testscene.gd" id="1_pd5uf"]
+[ext_resource type="Script" uid="uid://cqvomwecam1b8" path="res://Daniel Scenes/testScene.gd" id="1_mvmji"]
+[ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/draggableObject.tscn" id="2_y37vc"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_pd5uf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pd5uf"]
+size = Vector2(1.0002584, 0.99932534)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0eog"]
+size = Vector2(1.2925916, 0.99932534)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo2ln"]
+size = Vector2(1.2862661, 0.99932534)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nw7ie"]
+size = Vector2(1.0002584, 0.99932534)
 
 [node name="Node2D" type="Node2D" unique_id=135135717]
-script = ExtResource("1_pd5uf")
+script = ExtResource("1_mvmji")
 
-[node name="Draggable" parent="." unique_id=169746397 instance=ExtResource("1_bjxt1")]
+[node name="Walls" type="Node" parent="." unique_id=1563118963]
+
+[node name="right wall" type="StaticBody2D" parent="Walls" unique_id=1012240320]
+position = Vector2(1443, -171)
+rotation = 1.5707964
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/right wall" unique_id=76372533]
+position = Vector2(554.75, 245.25)
+scale = Vector2(906.5, 69.5)
+mesh = SubResource("QuadMesh_pd5uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/right wall" unique_id=1612276286]
+position = Vector2(554.633, 245.27345)
+scale = Vector2(906.49976, 69.499985)
+shape = SubResource("RectangleShape2D_pd5uf")
+
+[node name="ceiling" type="StaticBody2D" parent="Walls" unique_id=1399452966]
+position = Vector2(-104, -280)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/ceiling" unique_id=1300426012]
+position = Vector2(685.75, 245.25)
+scale = Vector2(1168.5, 69.5)
+mesh = SubResource("QuadMesh_pd5uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/ceiling" unique_id=488518332]
+position = Vector2(687.13293, 245.27345)
+scale = Vector2(906.49976, 69.499985)
+shape = SubResource("RectangleShape2D_v0eog")
+
+[node name="floor" type="StaticBody2D" parent="Walls" unique_id=1890366434]
+position = Vector2(1005, 925)
+rotation = -3.1415925
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/floor" unique_id=1598032246]
+position = Vector2(424.75006, 245.25)
+scale = Vector2(1166.4999, 69.5)
+mesh = SubResource("QuadMesh_pd5uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/floor" unique_id=256397468]
+position = Vector2(425, 245.2735)
+scale = Vector2(906.49976, 69.499985)
+shape = SubResource("RectangleShape2D_eo2ln")
+
+[node name="wall left" type="StaticBody2D" parent="Walls" unique_id=540630972]
+position = Vector2(210, -164)
+rotation = 1.5707964
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/wall left" unique_id=1787497146]
+position = Vector2(554.75, 245.25)
+scale = Vector2(906.5, 69.5)
+mesh = SubResource("QuadMesh_pd5uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall left" unique_id=632977972]
+position = Vector2(554.633, 245.27345)
+scale = Vector2(906.49976, 69.499985)
+shape = SubResource("RectangleShape2D_nw7ie")
+
+[node name="Draggable" parent="." unique_id=169746397 instance=ExtResource("2_y37vc")]
 position = Vector2(262, 154)
 
-[node name="Draggable2" parent="." unique_id=979678123 instance=ExtResource("1_bjxt1")]
-position = Vector2(251, 153)
+[node name="Draggable2" parent="." unique_id=979678123 instance=ExtResource("2_y37vc")]
+position = Vector2(159, 128)
+
+[node name="Draggable3" parent="." unique_id=841988232 instance=ExtResource("2_y37vc")]
+position = Vector2(262, 154)
+
+[node name="Draggable4" parent="." unique_id=1682964656 instance=ExtResource("2_y37vc")]
+position = Vector2(262, 154)
+
+[node name="Draggable5" parent="." unique_id=748301901 instance=ExtResource("2_y37vc")]
+position = Vector2(262, 154)
+
+[node name="Draggable6" parent="." unique_id=381169297 instance=ExtResource("2_y37vc")]
+position = Vector2(262, 154)
+
+[node name="Draggable7" parent="." unique_id=1039018366 instance=ExtResource("2_y37vc")]
+position = Vector2(262, 154)
+
+[node name="Draggable8" parent="." unique_id=309442337 instance=ExtResource("2_y37vc")]
+position = Vector2(262, 154)
+
+[node name="Draggable9" parent="." unique_id=507570462 instance=ExtResource("2_y37vc")]
+position = Vector2(262, 154)
