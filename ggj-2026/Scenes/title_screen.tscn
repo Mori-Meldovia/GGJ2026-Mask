@@ -2,44 +2,180 @@
 
 [ext_resource type="Script" uid="uid://cnh7hp88qjaef" path="res://Scripts/TitleScreen.gd" id="1_klylv"]
 
-[node name="TitleScreen" type="Control" unique_id=775410143]
+[sub_resource type="LabelSettings" id="LabelSettings_klylv"]
+font_size = 250
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_p3fck"]
+
+[node name="Control" type="Control" unique_id=1484657821]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 script = ExtResource("1_klylv")
 
-[node name="Start" type="Button" parent="." unique_id=35826707]
+[node name="Title" type="Label" parent="." unique_id=214647948]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 300
+text = "Packing"
+label_settings = SubResource("LabelSettings_klylv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainButtons" type="VBoxContainer" parent="." unique_id=285518466]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -136.0
-offset_top = -45.5
-offset_right = 136.0
-offset_bottom = 45.5
+offset_left = -255.5
+offset_top = -122.5
+offset_right = 255.5
+offset_bottom = 122.5
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 15
+
+[node name="Start" type="Button" parent="MainButtons" unique_id=35826707]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="Quit" type="Button" parent="." unique_id=984575870]
+[node name="Settings" type="Button" parent="MainButtons" unique_id=1627451159]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "Settings
+"
+
+[node name="Credits" type="Button" parent="MainButtons" unique_id=1763071316]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Credits
+"
+
+[node name="Quit" type="Button" parent="MainButtons" unique_id=984575870]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="SettingsMenu" type="VBoxContainer" parent="." unique_id=990038727]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -137.0
-offset_top = 58.0
-offset_right = 135.0
-offset_bottom = 149.0
+offset_left = -233.0
+offset_top = -123.0
+offset_right = 251.0
+offset_bottom = 329.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Quit"
+theme_override_constants/separation = 16
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[node name="Fullscreen" type="CheckBox" parent="SettingsMenu" unique_id=292865625]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Fullscreen"
+icon = SubResource("ViewportTexture_p3fck")
+alignment = 1
+
+[node name="MainVolLabel" type="Label" parent="SettingsMenu" unique_id=2105640393]
+custom_minimum_size = Vector2(484, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Main Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainVolSlider" type="HSlider" parent="SettingsMenu" unique_id=767892912]
+layout_mode = 2
+step = 0.001
+
+[node name="MusicLabel" type="Label" parent="SettingsMenu" unique_id=707215927]
+custom_minimum_size = Vector2(484, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="SettingsMenu" unique_id=386169619]
+layout_mode = 2
+step = 0.001
+
+[node name="SFXLabel" type="Label" parent="SettingsMenu" unique_id=1438545682]
+custom_minimum_size = Vector2(484, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "SFX Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="SettingsMenu" unique_id=2098470234]
+layout_mode = 2
+step = 0.001
+
+[node name="Back" type="Button" parent="SettingsMenu" unique_id=485266224]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[node name="CreditsMenu" type="VBoxContainer" parent="." unique_id=1986386107]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -65.0
+offset_right = 500.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CreditsMenu" unique_id=93948081]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Programmed by 
+Daniel Robinson, 
+Lily Murdock, 
+Tris Wong
+
+Music composed by 
+Raymond Chan"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="CreditsMenu" unique_id=1515414067]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[connection signal="pressed" from="MainButtons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButtons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainButtons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MainButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="SettingsMenu/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="value_changed" from="SettingsMenu/MainVolSlider" to="." method="_on_main_vol_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="SettingsMenu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CreditsMenu/Back" to="." method="_on_back_pressed"]
