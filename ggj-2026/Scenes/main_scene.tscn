@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bti5p8qkhulhm"]
 
-[ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://box.tscn" id="1_jv6wh"]
-[ext_resource type="Script" uid="uid://lngoe8x83om4" path="res://Scenes/ItemSpawner.gd" id="1_x6ack"]
-[ext_resource type="PackedScene" uid="uid://bvmh3l7r5tsx4" path="res://item.tscn" id="2_x6ack"]
-[ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://world_floor.tscn" id="3_iacmt"]
-[ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://button.tscn" id="5_iacmt"]
+[ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="1_jv6wh"]
+[ext_resource type="Script" uid="uid://lngoe8x83om4" path="res://Scripts/ItemSpawner.gd" id="1_x6ack"]
+[ext_resource type="PackedScene" uid="uid://bvmh3l7r5tsx4" path="res://Scenes/item.tscn" id="2_x6ack"]
+[ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://Scenes/world_floor.tscn" id="3_iacmt"]
+[ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_iacmt"]
 
 [node name="Main Scene" type="Node2D" unique_id=1491558032]
 script = ExtResource("1_x6ack")
