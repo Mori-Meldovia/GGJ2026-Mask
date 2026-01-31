@@ -6,25 +6,38 @@ class_name DraggableRigidBody
 @export var pull_force: float = 8
 @export var rotation_mult: float = .0005
 
+@export_group("Breaking")
+@export var shatter_threshold = 500
+
 @onready var held: bool = false;
 @onready var velocity: Vector2 = Vector2(0, 0)
+@onready var shatter = $ShatterableComponent if has_node("ShatterableComponent") else null
+
 
 
 func _ready() -> void:
 	gravity_scale = default_gravity_scale
+	input_pickable = true;
+	if (shatter):
+		contact_monitor = true;
+		max_contacts_reported = 4;
+	call_deferred("connect_to_nodes")
 	
+func connect_to_nodes() -> void:
+	if !is_connected("input_event", _on_input_event):
+		input_event.connect(_on_input_event)
+
 func _physics_process(_delta: float) -> void:
 	var mouse_position = get_viewport().get_mouse_position()
-	
-	
+
 	if held == true:
 		#moves the thig directly to the thing
 		#if distance between mouse and held object and mouse is
 		#greater than radius (circle_size) pull towards object depending on distance
 		
+		drag_physics(mouse_position)
 		
 		
-		shitty_physics_b(mouse_position)
 	if Input.is_action_just_released("Click"):
 		held = false
 		gravity_scale = default_gravity_scale
@@ -32,7 +45,7 @@ func _physics_process(_delta: float) -> void:
 	position += velocity 
 	
 	
-func shitty_physics_b(mouse_position) -> void:
+func drag_physics(mouse_position) -> void:
 	var direction = (mouse_position - global_position).normalized()
 	var distance = global_position.distance_to(mouse_position)
 	
@@ -52,4 +65,11 @@ func shitty_physics_b(mouse_position) -> void:
 func _on_input_event(_viewport: Node, event: InputEvent,_shape_idx: int) -> void:
 	if event.is_action_pressed("Click"):
 		held = true;
+		
 		#gravity_scale = 0;
+
+
+func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	if state.get_contact_count() > 0:
+		if linear_velocity.length() > shatter_threshold && shatter && !held:
+			shatter.shatter()

@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bs2add048q527"]
 
 [ext_resource type="Script" uid="uid://cqvomwecam1b8" path="res://Daniel Scenes/testScene.gd" id="1_mvmji"]
-[ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/draggableObject.tscn" id="2_y37vc"]
+[ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/drag_and_shatter_object.tscn" id="2_y37vc"]
+[ext_resource type="PackedScene" uid="uid://cnpg2pnk4maky" path="res://Daniel Scenes/draggable_only_object.tscn" id="3_y37vc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_pd5uf"]
 
@@ -77,29 +78,11 @@ position = Vector2(554.633, 245.27345)
 scale = Vector2(906.49976, 69.499985)
 shape = SubResource("RectangleShape2D_nw7ie")
 
-[node name="Draggable" parent="." unique_id=169746397 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
+[node name="DraggableOnlyObject" parent="." unique_id=972531411 instance=ExtResource("3_y37vc")]
+position = Vector2(946, 132)
 
-[node name="Draggable2" parent="." unique_id=979678123 instance=ExtResource("2_y37vc")]
-position = Vector2(159, 128)
+[node name="Draggable" parent="." unique_id=841988232 instance=ExtResource("2_y37vc")]
+position = Vector2(188, 239)
 
-[node name="Draggable3" parent="." unique_id=841988232 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
-
-[node name="Draggable4" parent="." unique_id=1682964656 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
-
-[node name="Draggable5" parent="." unique_id=748301901 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
-
-[node name="Draggable6" parent="." unique_id=381169297 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
-
-[node name="Draggable7" parent="." unique_id=1039018366 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
-
-[node name="Draggable8" parent="." unique_id=309442337 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
-
-[node name="Draggable9" parent="." unique_id=507570462 instance=ExtResource("2_y37vc")]
-position = Vector2(262, 154)
+[node name="Draggable2" parent="." unique_id=1162933894 instance=ExtResource("2_y37vc")]
+position = Vector2(360, 241)

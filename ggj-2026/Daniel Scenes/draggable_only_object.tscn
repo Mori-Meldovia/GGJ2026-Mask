@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cnpg2pnk4maky"]
+
+[ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_mcluh"]
+[ext_resource type="Texture2D" uid="uid://doxhqlep25o1" path="res://icon.svg" id="2_lpeen"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="2_tyxdv"]
+
+[node name="DraggableOnlyObject" type="RigidBody2D" unique_id=972531411]
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_mcluh")
+metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=593489356]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpeen")
+script = ExtResource("2_tyxdv")
