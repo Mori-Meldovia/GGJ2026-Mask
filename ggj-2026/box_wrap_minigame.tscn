@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dvnsrjnp0x35t"]
+
+[ext_resource type="Script" uid="uid://ct77324ni71rr" path="res://box_wrap_minigame.gd" id="1_rqf83"]
+[ext_resource type="Texture2D" uid="uid://c77juuf05blnw" path="res://Assets/Cardboard Box Top.png" id="1_sfotk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1iikq"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=231748353]
+z_index = 1
+scale = Vector2(7.5, 7.5)
+script = ExtResource("1_rqf83")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=105027422]
+shape = SubResource("RectangleShape2D_1iikq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1839129835]
+texture = ExtResource("1_sfotk")
+
+[node name="Button" type="Button" parent="." unique_id=882965472]
+modulate = Color(1, 1, 1, 0)
+offset_left = -16.133335
+offset_top = -16.133335
+offset_right = 15.866669
+offset_bottom = 15.866669
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
