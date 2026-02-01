@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://kt36hiy6jaju"]
 
+[ext_resource type="FontFile" uid="uid://bmktm18q2st" path="res://Assets/Fonts/Inkfree.ttf" id="1_4gxqj"]
 [ext_resource type="Script" uid="uid://cnh7hp88qjaef" path="res://Scripts/TitleScreen.gd" id="1_klylv"]
+[ext_resource type="Texture2D" uid="uid://eaqa2kr7m56b" path="res://Assets/MenuUI/titlebackground.webp" id="3_twnyg"]
+[ext_resource type="PackedScene" uid="uid://dfhxwctlns38e" path="res://Scenes/music_manager.tscn" id="4_twnyg"]
+
+[sub_resource type="Theme" id="Theme_55kwv"]
+default_font = ExtResource("1_4gxqj")
+/fonts/Font = ExtResource("1_4gxqj")
 
 [sub_resource type="LabelSettings" id="LabelSettings_klylv"]
-font_size = 250
+font_size = 125
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_p3fck"]
 
@@ -12,57 +20,74 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+theme = SubResource("Theme_55kwv")
 script = ExtResource("1_klylv")
+
+[node name="Background" type="TextureRect" parent="." unique_id=388761821]
+z_index = -4096
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+texture = ExtResource("3_twnyg")
 
 [node name="Title" type="Label" parent="." unique_id=214647948]
 layout_mode = 1
-offset_right = 1920.0
-offset_bottom = 500.0
+offset_left = -97.0
+offset_top = 25.0
+offset_right = 1029.0
+offset_bottom = 525.0
 theme_override_font_sizes/font_size = 300
-text = "Packing"
+text = "Packing Parts"
 label_settings = SubResource("LabelSettings_klylv")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MainButtons" type="VBoxContainer" parent="." unique_id=285518466]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -255.5
-offset_top = -122.5
-offset_right = 255.5
-offset_bottom = 122.5
-grow_horizontal = 2
+offset_left = 201.0
+offset_top = -149.0
+offset_right = 712.0
+offset_bottom = 180.0
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 15
 
 [node name="Start" type="Button" parent="MainButtons" unique_id=35826707]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
 text = "Start"
+flat = true
 
 [node name="Settings" type="Button" parent="MainButtons" unique_id=1627451159]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
 text = "Settings
 "
+flat = true
 
 [node name="Credits" type="Button" parent="MainButtons" unique_id=1763071316]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
 text = "Credits
 "
+flat = true
 
 [node name="Quit" type="Button" parent="MainButtons" unique_id=984575870]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
 text = "Quit"
+flat = true
 
 [node name="SettingsMenu" type="VBoxContainer" parent="." unique_id=990038727]
 visible = false
@@ -72,24 +97,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -233.0
-offset_top = -123.0
-offset_right = 251.0
-offset_bottom = 329.0
+offset_left = -736.0
+offset_top = -156.0
+offset_right = -252.0
+offset_bottom = 296.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
 [node name="Fullscreen" type="CheckBox" parent="SettingsMenu" unique_id=292865625]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Fullscreen"
 icon = SubResource("ViewportTexture_p3fck")
+flat = true
 alignment = 1
 
 [node name="MainVolLabel" type="Label" parent="SettingsMenu" unique_id=2105640393]
 custom_minimum_size = Vector2(484, 55)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Main Volume"
 horizontal_alignment = 1
@@ -97,11 +126,13 @@ vertical_alignment = 1
 
 [node name="MainVolSlider" type="HSlider" parent="SettingsMenu" unique_id=767892912]
 layout_mode = 2
+max_value = 10.0
 step = 0.001
 
 [node name="MusicLabel" type="Label" parent="SettingsMenu" unique_id=707215927]
 custom_minimum_size = Vector2(484, 55)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Music Volume"
 horizontal_alignment = 1
@@ -109,11 +140,13 @@ vertical_alignment = 1
 
 [node name="MusicSlider" type="HSlider" parent="SettingsMenu" unique_id=386169619]
 layout_mode = 2
+max_value = 10.0
 step = 0.001
 
 [node name="SFXLabel" type="Label" parent="SettingsMenu" unique_id=1438545682]
 custom_minimum_size = Vector2(484, 55)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "SFX Volume"
 horizontal_alignment = 1
@@ -121,6 +154,7 @@ vertical_alignment = 1
 
 [node name="SFXSlider" type="HSlider" parent="SettingsMenu" unique_id=2098470234]
 layout_mode = 2
+max_value = 20.0
 step = 0.001
 
 [node name="Back" type="Button" parent="SettingsMenu" unique_id=485266224]
@@ -128,6 +162,7 @@ custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "BACK"
 
@@ -139,10 +174,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -500.0
-offset_top = -65.0
-offset_right = 500.0
-offset_bottom = 286.0
+offset_left = -999.0
+offset_top = -176.0
+offset_right = 1.0
+offset_bottom = 391.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
@@ -150,6 +185,7 @@ theme_override_constants/separation = 16
 [node name="Label" type="Label" parent="CreditsMenu" unique_id=93948081]
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Programmed by 
 Daniel Robinson, 
@@ -157,7 +193,7 @@ Lily Murdock,
 Tris Wong
 
 Music composed by 
-Raymond Chan"
+Raymond Tsai"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -166,8 +202,11 @@ custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "BACK"
+
+[node name="Music Manager" parent="." unique_id=2123070553 instance=ExtResource("4_twnyg")]
 
 [connection signal="pressed" from="MainButtons/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Settings" to="." method="_on_settings_pressed"]
