@@ -24,6 +24,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if full == false and body.is_in_group("Item"):
 		current_capacity += body.get_volume()
+		GlobalDaniel.num_items -= 1
 		body.queue_free()
 		print(current_capacity)
 		if current_capacity >= max_capacity:

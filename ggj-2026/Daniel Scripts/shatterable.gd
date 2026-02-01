@@ -14,6 +14,7 @@ enum fragment_corner {
 @onready var sprite = get_parent().get_node("Sprite2D")
 
 func shatter() -> void:
+	GlobalDaniel.num_items += 3
 	for corner in fragment_corner.values():
 		var fragment = make_fragment_corner(corner)
 		get_node("../../").add_child(fragment)
@@ -43,7 +44,7 @@ func make_fragment_corner(corner: fragment_corner) -> DraggableRigidBody:
 	if get_parent() is RigidBody2D:
 		fragment.linear_velocity = get_parent().linear_velocity
 		fragment.angular_velocity = get_parent().angular_velocity
-	
+	fragment.add_to_group("Item")
 	fragment.add_child(fragment_sprite)
 
 	

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bimgkgugorfyl"]
+
+[ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_yusx3"]
+[ext_resource type="Texture2D" uid="uid://dbwhlw6heuesd" path="res://Assets/Item Sprites/cooking_pot.png" id="2_xp0c2"]
+[ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="3_lk8o6"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_xp0c2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ni2xo"]
+friction = 0.79
+bounce = 0.1
+
+[node name="MediumObjects" type="RigidBody2D" unique_id=841988232 groups=["Item"]]
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_ni2xo")
+gravity_scale = 1.3
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_yusx3")
+shatter_threshold = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121248732]
+scale = Vector2(3, 3)
+texture = ExtResource("2_xp0c2")
+script = ExtResource("3_xp0c2")
+
+[node name="ShatterableComponent" type="Node" parent="." unique_id=166628383]
+script = ExtResource("3_lk8o6")
+metadata/_custom_type_script = "uid://blqv7gbby7gct"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
