@@ -14,25 +14,28 @@ script = ExtResource("1_oq5cr")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1453584595]
 self_modulate = Color(1, 1, 1, 0)
-scale = Vector2(1, 0.9781046)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_oq5cr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1248574100]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_oq5cr")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=536275856]
+scale = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=581871797]
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(0, -15.5)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_bqn3j")
 
 [node name="Button" type="Button" parent="." unique_id=451130322]
 modulate = Color(1, 1, 1, 0)
-offset_left = -16.0
-offset_top = -16.0
-offset_right = -0.04573059
-offset_bottom = -0.06986904
+offset_left = -24.0
+offset_top = -24.0
+offset_right = -0.13719368
+offset_bottom = -0.6026192
 scale = Vector2(2.0114985, 2.008772)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
