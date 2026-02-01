@@ -1,6 +1,6 @@
-[gd_scene format=4 uid="uid://bti5p8qkhulhm"]
+[gd_scene format=4 uid="uid://ivt1a66qq1vc"]
 
-[ext_resource type="Script" uid="uid://br3234qj4qpdk" path="res://Scenes/level_1.gd" id="1_esggg"]
+[ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_esggg"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_didp7"]
 [ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://Scenes/world_floor.tscn" id="4_4iphx"]
 [ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_jgkgd"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://isevpx7ffhdu" path="res://Scenes/Item Scenes/lamp_floor.tscn" id="16_esggg"]
 [ext_resource type="PackedScene" uid="uid://de1w1wrptp6u8" path="res://Scenes/Item Scenes/lamp_table.tscn" id="17_nolpu"]
 [ext_resource type="PackedScene" uid="uid://dxc56hrmiln4i" path="res://Scenes/Item Scenes/mask_cowl.tscn" id="18_esggg"]
-[ext_resource type="PackedScene" uid="uid://bqkskxx8emsmj" path="res://Scenes/instructions.tscn" id="19_nolpu"]
+[ext_resource type="PackedScene" path="res://Scenes/instructions.tscn" id="19_nolpu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgkgd"]
 texture = ExtResource("8_4iphx")
@@ -39,6 +39,14 @@ sources/0 = SubResource("TileSetAtlasSource_jgkgd")
 [node name="Main Scene" type="Node2D" unique_id=1491558032]
 position = Vector2(0, -50)
 script = ExtResource("1_esggg")
+
+[node name="MenuUI" parent="." unique_id=1065218817 instance=ExtResource("11_rqhku")]
+z_index = 4096
+offset_left = -1.0
+offset_top = 124.0
+offset_right = -1.0
+offset_bottom = 124.0
+scale = Vector2(0.4, 0.4)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1581241539]
 position = Vector2(0, -82)
@@ -85,10 +93,6 @@ position = Vector2(360, -25)
 
 [node name="Chair2" parent="." unique_id=311161942 instance=ExtResource("10_rqhku")]
 position = Vector2(218, -25)
-
-[node name="MenuUI" parent="." unique_id=1065218817 instance=ExtResource("11_rqhku")]
-visible = false
-z_index = 4096
 
 [node name="Table" parent="." unique_id=855216947 instance=ExtResource("12_cpkqv")]
 position = Vector2(288, -26)
