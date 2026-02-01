@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_ggyhi"]
 [ext_resource type="Texture2D" uid="uid://x8aencquhu5r" path="res://Assets/Item Sprites/lamp_floor.png" id="2_ggyhi"]
 [ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_rfff3"]
+[ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="4_7v42a"]
 
 [node name="lamp_floor" type="RigidBody2D" unique_id=1948772188 groups=["Item"]]
 continuous_cd = 1
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_ggyhi")
+shatter_threshold = 200
 volume = 5
 metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
 
@@ -17,3 +19,7 @@ texture_filter = 1
 scale = Vector2(3, 3)
 texture = ExtResource("2_ggyhi")
 script = ExtResource("3_rfff3")
+
+[node name="ShatterableComponent" type="Node" parent="." unique_id=1053162272]
+script = ExtResource("4_7v42a")
+metadata/_custom_type_script = "uid://blqv7gbby7gct"

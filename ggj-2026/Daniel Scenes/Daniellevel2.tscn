@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://peylhoeh15mq" path="res://Daniel Scenes/daniellevel_2.gd" id="1_4wrsc"]
 [ext_resource type="PackedScene" uid="uid://dbptjtcsf8jfo" path="res://Scenes/menu_ui.tscn" id="1_8mseq"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="1_wkm4t"]
-[ext_resource type="PackedScene" uid="uid://05tnp6pocpta" path="res://Daniel Scenes/banana.tscn" id="2_otxdw"]
+[ext_resource type="PackedScene" uid="uid://05tnp6pocpta" path="res://Daniel Scenes/danielbanana.tscn" id="2_otxdw"]
 [ext_resource type="Texture2D" uid="uid://doei2nofq1t7w" path="res://Assets/Kitchen.png" id="3_wkm4t"]
 [ext_resource type="PackedScene" uid="uid://bimgkgugorfyl" path="res://Daniel Scenes/medium_objects.tscn" id="6_24jwf"]
 [ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="7_0gpoh"]
