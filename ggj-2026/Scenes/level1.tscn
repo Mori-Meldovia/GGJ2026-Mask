@@ -41,7 +41,6 @@ position = Vector2(-198, -21)
 position = Vector2(-204, -149)
 
 [node name="World Floor" parent="." unique_id=1814318651 instance=ExtResource("4_4iphx")]
-visible = false
 
 [node name="Button" parent="." unique_id=307135624 instance=ExtResource("5_jgkgd")]
 position = Vector2(-249.99997, -20)
