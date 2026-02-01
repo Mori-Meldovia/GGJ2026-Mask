@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://05tnp6pocpta"]
+[gd_scene format=3 uid="uid://bty3nmivo3r6a"]
 
 [ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_2w8jp"]
 [ext_resource type="Texture2D" uid="uid://dnklpfp48omhh" path="res://Assets/Item Sprites/banana.png" id="2_e2hc3"]

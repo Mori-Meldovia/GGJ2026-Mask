@@ -21,13 +21,13 @@ func _on_menu_pressed() -> void:
 
 func _on_next_pressed() -> void:
 	if level_complete and !LevelSelector.is_last_level():
+		LevelSelector.increase_level()
 		get_tree().change_scene_to_file("res://Scenes/level" + str(LevelSelector.currentLevel) + ".tscn")
 	elif level_complete and LevelSelector.is_last_level():
 		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
 
 func _on_level_complete() -> void:
 	$Control/VBoxContainer/ButtonContainer/NextIcon.texture = load("res://Assets/MenuUI/WhiteArrow.webp")
-	LevelSelector.increase_level()
 	visible = true
 	level_complete = true
 
