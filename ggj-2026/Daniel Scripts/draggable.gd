@@ -17,6 +17,8 @@ class_name DraggableRigidBody
 @export var volume = 2 
 
 func _ready() -> void:
+	if (is_in_group("Item")):
+		GlobalDaniel.num_items += 1
 	gravity_scale = default_gravity_scale
 	input_pickable = true;
 	if (shatter):
@@ -68,13 +70,10 @@ func _on_input_event(_viewport: Node, event: InputEvent,_shape_idx: int) -> void
 		held = true;
 		
 		#gravity_scale = 0;
-
-
-func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	if state.get_contact_count() > 0:
-		if linear_velocity.length() > shatter_threshold && shatter && !held:
-			$BreakingSound.play()
-			shatter.shatter()
-			
 func get_volume():
 	return volume
+
+func _on_body_entered(body: Node) -> void:
+	if (!body.is_in_group("Box")):
+		if linear_velocity.length()  * 1.1 > shatter_threshold && shatter && !held:
+			shatter.shatter()
