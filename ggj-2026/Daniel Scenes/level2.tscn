@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://bbcy7uqdtawdq"]
+
+[ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="1_wns2c"]
+[ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/drag_and_shatter_object.tscn" id="2_sif5k"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fuyog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tttxj"]
+size = Vector2(350, 38)
+
+[sub_resource type="QuadMesh" id="QuadMesh_4140w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4140w"]
+size = Vector2(2492.5, 1511.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wns2c"]
+size = Vector2(2492.5, 1494.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sif5k"]
+size = Vector2(1773.5, 1182)
+
+[sub_resource type="QuadMesh" id="QuadMesh_gw76d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmwmm"]
+size = Vector2(1366, 1246)
+
+[node name="Node2D" type="Node2D" unique_id=819890504]
+
+[node name="Shelf" type="StaticBody2D" parent="." unique_id=81240652]
+position = Vector2(1469, 160)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Shelf" unique_id=1371149804]
+position = Vector2(122.99997, 229)
+scale = Vector2(349.24997, 38.5)
+mesh = SubResource("QuadMesh_fuyog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelf" unique_id=1627833615]
+position = Vector2(123, 229)
+shape = SubResource("RectangleShape2D_tttxj")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1488715558]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls" unique_id=1261563747]
+position = Vector2(1012.00006, -2)
+scale = Vector2(2717, 51)
+mesh = SubResource("QuadMesh_4140w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=547759747]
+position = Vector2(1064.5, -730.625)
+shape = SubResource("RectangleShape2D_4140w")
+
+[node name="Walls2" type="StaticBody2D" parent="." unique_id=223565992]
+position = Vector2(2201, 1074)
+rotation = 3.1415927
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls2" unique_id=1727690489]
+position = Vector2(1012.00006, -2)
+rotation = 3.1415927
+scale = Vector2(2717, 51)
+mesh = SubResource("QuadMesh_4140w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls2" unique_id=937078921]
+position = Vector2(1064.5, -723.2501)
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_wns2c")
+
+[node name="Walls3" type="StaticBody2D" parent="." unique_id=1473326112]
+position = Vector2(-1263, 145)
+rotation = 1.5707964
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls3" unique_id=1736367493]
+position = Vector2(408.76245, -1230.1981)
+rotation = 1.5707964
+scale = Vector2(149.99551, 1164.3567)
+mesh = SubResource("QuadMesh_4140w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls3" unique_id=758570707]
+position = Vector2(417, -418.75)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_sif5k")
+
+[node name="Walls4" type="StaticBody2D" parent="." unique_id=848053510]
+position = Vector2(2358, 585)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Walls4" unique_id=335771870]
+position = Vector2(-436.00003, -41.99997)
+scale = Vector2(51.500084, 1111.9999)
+mesh = SubResource("QuadMesh_gw76d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls4" unique_id=1174109520]
+position = Vector2(221, -34)
+shape = SubResource("RectangleShape2D_rmwmm")
+
+[node name="Box3" parent="." unique_id=793905182 instance=ExtResource("1_wns2c")]
+position = Vector2(622, 1005)
+scale = Vector2(2, 2)
+max_capacity = 10
+
+[node name="Box2" parent="." unique_id=611863760 instance=ExtResource("1_wns2c")]
+position = Vector2(443, 978)
+scale = Vector2(3, 3)
+
+[node name="Box" parent="." unique_id=947574443 instance=ExtResource("1_wns2c")]
+position = Vector2(221, 955)
+scale = Vector2(4, 4)
+max_capacity = 30
+
+[node name="Small Objects" type="Node" parent="." unique_id=112655061]
+
+[node name="Draggable" parent="Small Objects" unique_id=841988232 instance=ExtResource("2_sif5k")]
+position = Vector2(1564, 312)
+
+[node name="Draggable2" parent="Small Objects" unique_id=280532431 instance=ExtResource("2_sif5k")]
+position = Vector2(1564, 312)
+
+[node name="Draggable3" parent="Small Objects" unique_id=1433548387 instance=ExtResource("2_sif5k")]
+position = Vector2(1564, 312)
+
+[node name="Draggable4" parent="Small Objects" unique_id=1194787009 instance=ExtResource("2_sif5k")]
+position = Vector2(1564, 312)
+
+[node name="Draggable5" parent="Small Objects" unique_id=59046660 instance=ExtResource("2_sif5k")]
+position = Vector2(1564, 312)
+
+[node name="Draggable6" parent="Small Objects" unique_id=1176044907 instance=ExtResource("2_sif5k")]
+position = Vector2(1564, 312)
+
+[node name="Draggable7" parent="Small Objects" unique_id=1173681296 instance=ExtResource("2_sif5k")]
+position = Vector2(1564, 312)
