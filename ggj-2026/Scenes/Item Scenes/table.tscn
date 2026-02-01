@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://s38ysraw4xfa"]
+
+[ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_1vctt"]
+[ext_resource type="Texture2D" uid="uid://c7idujt2go4q7" path="res://Assets/Item Sprites/table_wooden.png" id="2_pqyho"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_63kbq"]
+
+[node name="Table" type="RigidBody2D" unique_id=972531411 groups=["Item"]]
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_1vctt")
+volume = 10
+metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=593489356]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_pqyho")
+script = ExtResource("3_63kbq")
