@@ -24,3 +24,4 @@ func _on_button_button_down() -> void:
 			add_child(item)
 			box = item
 			box.set_box_position(global_position + Vector2(50, 0))
+			box.set_box_scale(Vector2(1, 1))

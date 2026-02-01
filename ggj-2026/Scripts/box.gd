@@ -51,11 +51,16 @@ func complete() -> void:
 func launch() -> void:
 	launching = true
 	velocity = Vector2.UP * 500
+	$BellSound.play()
 	await get_tree().create_timer(1).timeout
 	queue_free()
 	
 func get_ready():
-	return ready_to_go
+	print()
+	return ready_to_go or get_tree().get_nodes_in_group("Item").size() <= 0
 
 func set_box_position(pos: Vector2):
 	global_position = pos
+
+func set_box_scale(scale: Vector2):
+	global_scale = scale

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://isevpx7ffhdu"]
+
+[ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_ggyhi"]
+[ext_resource type="Texture2D" uid="uid://x8aencquhu5r" path="res://Assets/Item Sprites/lamp_floor.png" id="2_ggyhi"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_rfff3"]
+
+[node name="lamp_floor" type="RigidBody2D" unique_id=1948772188 groups=["Item"]]
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_ggyhi")
+volume = 5
+metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=611842233 groups=["Item"]]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_ggyhi")
+script = ExtResource("3_rfff3")

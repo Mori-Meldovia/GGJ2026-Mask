@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://de1w1wrptp6u8"]
+
+[ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_t0rr7"]
+[ext_resource type="Texture2D" uid="uid://baa8170324wea" path="res://Assets/Item Sprites/lamp_table.png" id="2_37i87"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_aig5u"]
+
+[node name="lamp_table" type="RigidBody2D" unique_id=972531411 groups=["Item"]]
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_t0rr7")
+volume = 5
+metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=593489356 groups=["Item"]]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_37i87")
+script = ExtResource("3_aig5u")

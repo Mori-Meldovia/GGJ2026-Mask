@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://doxhqlep25o1" path="res://Assets/icon.svg" id="1_7f76m"]
 [ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_ni2xo"]
 [ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="3_y03i7"]
+[ext_resource type="AudioStream" uid="uid://chji3dmo187j5" path="res://Assets/SFX/glassbreaking.mp3" id="4_51wke"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ni2xo"]
 friction = 0.79
@@ -28,5 +29,9 @@ polygon = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
 [node name="ShatterableComponent" type="Node" parent="." unique_id=166628383]
 script = ExtResource("3_y03i7")
 metadata/_custom_type_script = "uid://blqv7gbby7gct"
+
+[node name="BreakingSound" type="AudioStreamPlayer2D" parent="." unique_id=1505074196]
+stream = ExtResource("4_51wke")
+bus = &"SFX"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
