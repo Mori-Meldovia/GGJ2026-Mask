@@ -12,6 +12,6 @@ func _process(delta: float) -> void:
 		spawn_item()
 		
 func spawn_item() -> void:
-	var scene = load("res://item.tscn")
+	var scene = load("res://Scenes/item.tscn")
 	var item = scene.instantiate()
 	add_child(item)
