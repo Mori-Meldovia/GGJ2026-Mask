@@ -73,7 +73,7 @@ func _on_input_event(_viewport: Node, event: InputEvent,_shape_idx: int) -> void
 func get_volume():
 	return volume
 
-func _on_body_entered(body: Node) -> void:
-	if (!body.is_in_group("Box")):
-		if linear_velocity.length()  * 1.1 > shatter_threshold && shatter && !held:
+func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	if state.get_contact_count() > 0:
+		if linear_velocity.length() > shatter_threshold && shatter && !held:
 			shatter.shatter()
