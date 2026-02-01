@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bs2add048q527"]
 
-[ext_resource type="Script" uid="uid://cqvomwecam1b8" path="res://Daniel Scenes/testscene.gd" id="1_mvmji"]
+[ext_resource type="Script" path="res://Daniel Scripts/testscene.gd" id="1_mvmji"]
 [ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/drag_and_shatter_object.tscn" id="2_y37vc"]
 [ext_resource type="PackedScene" uid="uid://cnpg2pnk4maky" path="res://Daniel Scenes/draggable_only_object.tscn" id="3_y37vc"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="4_v0eog"]
@@ -81,7 +81,7 @@ scale = Vector2(906.49976, 69.499985)
 shape = SubResource("RectangleShape2D_nw7ie")
 
 [node name="DraggableOnlyObject" parent="." unique_id=972531411 instance=ExtResource("3_y37vc")]
-position = Vector2(619, 198)
+position = Vector2(703.99994, 207.5)
 
 [node name="Draggable" parent="." unique_id=841988232 instance=ExtResource("2_y37vc")]
 position = Vector2(188, 239)
