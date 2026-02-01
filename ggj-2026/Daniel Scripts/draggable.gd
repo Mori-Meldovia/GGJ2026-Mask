@@ -11,7 +11,7 @@ class_name DraggableRigidBody
 
 @onready var held: bool = false;
 @onready var velocity: Vector2 = Vector2(0, 0)
-@onready var shatter = $ShatterableComponent if has_node("ShatterableComponent") else null
+@onready var shatter = $ShatterAndAudio if has_node("ShatterAndAudio") else null
 
 @export_group("Volume")
 @export var volume = 2 
