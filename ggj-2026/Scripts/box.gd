@@ -8,6 +8,10 @@ var full = false
 var ready_to_go = false
 var loaded = false
 var launching = false
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	GlobalDaniel.num_boxes += 1
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,6 +28,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if full == false and body.is_in_group("Item"):
 		current_capacity += body.get_volume()
+		GlobalDaniel.num_items -= 1
 		body.queue_free()
 		print(current_capacity)
 		if current_capacity >= max_capacity:
@@ -51,6 +56,7 @@ func launch() -> void:
 	launching = true
 	velocity = Vector2.UP * 500
 	await get_tree().create_timer(1).timeout
+	GlobalDaniel.num_boxes -= 1
 	queue_free()
 	
 func get_ready():
@@ -58,3 +64,4 @@ func get_ready():
 
 func set_box_position(pos: Vector2):
 	global_position = pos
+	

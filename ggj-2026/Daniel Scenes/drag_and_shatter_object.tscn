@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://doxhqlep25o1" path="res://Assets/icon.svg" id="1_7f76m"]
 [ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_ni2xo"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_51wke"]
 [ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="3_y03i7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ni2xo"]
@@ -18,12 +19,9 @@ max_contacts_reported = 4
 script = ExtResource("1_ni2xo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121248732]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_7f76m")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=545173470]
-scale = Vector2(0.3, 0.3)
-polygon = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
+script = ExtResource("3_51wke")
 
 [node name="ShatterableComponent" type="Node" parent="." unique_id=166628383]
 script = ExtResource("3_y03i7")

@@ -14,6 +14,7 @@ enum fragment_corner {
 @onready var sprite = get_parent().get_node("Sprite2D")
 
 func shatter() -> void:
+	GlobalDaniel.num_items += 3
 	for corner in fragment_corner.values():
 		var fragment = make_fragment_corner(corner)
 		get_node("../../").add_child(fragment)
