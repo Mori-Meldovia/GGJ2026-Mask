@@ -1,13 +1,12 @@
-[gd_scene format=3 uid="uid://bbcy7uqdtawdq"]
+[gd_scene format=3 uid="uid://20n0mnl4rlxu"]
 
-[ext_resource type="Script" uid="uid://peylhoeh15mq" path="res://Daniel Scenes/daniellevel_2.gd" id="1_lgosu"]
-[ext_resource type="PackedScene" uid="uid://dbptjtcsf8jfo" path="res://Scenes/menu_ui.tscn" id="2_mhlpv"]
-[ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_mmf1u"]
-[ext_resource type="PackedScene" uid="uid://dfhxwctlns38e" path="res://Scenes/sound_manager.tscn" id="2_ng020"]
-[ext_resource type="Texture2D" uid="uid://doei2nofq1t7w" path="res://Assets/Kitchen.png" id="3_ng020"]
-[ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_ca0bt"]
-[ext_resource type="PackedScene" uid="uid://beaps6c1vqh14" path="res://Scenes/Item Scenes/banana.tscn" id="6_mhlpv"]
-[ext_resource type="PackedScene" uid="uid://bimgkgugorfyl" path="res://Daniel Scenes/medium_objects.tscn" id="6_mtqcm"]
+[ext_resource type="Script" uid="uid://peylhoeh15mq" path="res://Daniel Scenes/daniellevel_2.gd" id="1_4wrsc"]
+[ext_resource type="PackedScene" uid="uid://dbptjtcsf8jfo" path="res://Scenes/menu_ui.tscn" id="1_8mseq"]
+[ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="1_wkm4t"]
+[ext_resource type="PackedScene" uid="uid://05tnp6pocpta" path="res://Daniel Scenes/danielbanana.tscn" id="2_otxdw"]
+[ext_resource type="Texture2D" uid="uid://doei2nofq1t7w" path="res://Assets/Kitchen.png" id="3_wkm4t"]
+[ext_resource type="PackedScene" uid="uid://bimgkgugorfyl" path="res://Daniel Scenes/medium_objects.tscn" id="6_24jwf"]
+[ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="7_0gpoh"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4140w"]
 
@@ -29,27 +28,16 @@ size = Vector2(1366, 1246)
 size = Vector2(119, 27)
 
 [node name="Node2D" type="Node2D" unique_id=819890504]
-script = ExtResource("1_lgosu")
+script = ExtResource("1_4wrsc")
 
-[node name="Sound Manager" parent="." unique_id=2123070553 instance=ExtResource("2_ng020")]
-
-[node name="MenuUI" parent="." unique_id=1065218817 instance=ExtResource("2_mhlpv")]
+[node name="MenuUI" parent="." unique_id=1065218817 instance=ExtResource("1_8mseq")]
 z_index = 10
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-offset_top = -15.0
-offset_bottom = -15.0
-grow_vertical = 0
-scale = Vector2(0.465, 0.465)
-metadata/_edit_use_anchors_ = true
 
 [node name="Kitchen" type="Sprite2D" parent="." unique_id=1710773883]
 z_index = -5
 position = Vector2(-1, -223)
 scale = Vector2(11.937499, 13.500001)
-texture = ExtResource("3_ng020")
+texture = ExtResource("3_wkm4t")
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1488715558]
 position = Vector2(-1037, -452)
@@ -113,44 +101,43 @@ mesh = SubResource("QuadMesh_gw76d")
 position = Vector2(-1298, -743)
 shape = SubResource("RectangleShape2D_rmwmm")
 
-[node name="Box3" parent="." unique_id=793905182 instance=ExtResource("2_mmf1u")]
+[node name="Box3" parent="." unique_id=793905182 instance=ExtResource("1_wkm4t")]
 position = Vector2(162, -50)
 max_capacity = 10
 
-[node name="Box2" parent="." unique_id=611863760 instance=ExtResource("2_mmf1u")]
+[node name="Box2" parent="." unique_id=611863760 instance=ExtResource("1_wkm4t")]
 position = Vector2(66, -62.00003)
 scale = Vector2(1.5, 1.5)
 
 [node name="Small Objects" type="Node" parent="." unique_id=112655061]
 
-[node name="banana5" parent="Small Objects" unique_id=1924910213 instance=ExtResource("6_mhlpv")]
-position = Vector2(-261, -69)
+[node name="Draggable" parent="Small Objects" unique_id=841988232 instance=ExtResource("2_otxdw")]
+position = Vector2(-306, -66)
 
-[node name="banana4" parent="Small Objects" unique_id=1855762031 instance=ExtResource("6_mhlpv")]
-position = Vector2(-84, -65)
+[node name="Draggable2" parent="Small Objects" unique_id=899383259 instance=ExtResource("2_otxdw")]
+position = Vector2(-254, -60)
 
-[node name="banana" parent="Small Objects" unique_id=73889438 instance=ExtResource("6_mhlpv")]
-position = Vector2(-347, -60)
-shatter_threshold = 250
+[node name="Draggable3" parent="Small Objects" unique_id=2076254357 instance=ExtResource("2_otxdw")]
+position = Vector2(-193, -53)
 
-[node name="banana2" parent="Small Objects" unique_id=1710439317 instance=ExtResource("6_mhlpv")]
-position = Vector2(-156, -66)
+[node name="Draggable4" parent="Small Objects" unique_id=695377186 instance=ExtResource("2_otxdw")]
+position = Vector2(-139, -53)
 
-[node name="banana3" parent="Small Objects" unique_id=1558552097 instance=ExtResource("6_mhlpv")]
-position = Vector2(-207, -68)
+[node name="Draggable5" parent="Small Objects" unique_id=1100807669 instance=ExtResource("2_otxdw")]
+position = Vector2(-78, -61)
 
-[node name="banana6" parent="Small Objects" unique_id=1368123331 instance=ExtResource("6_mhlpv")]
-position = Vector2(-296, -67)
+[node name="Draggable6" parent="Small Objects" unique_id=1951519813 instance=ExtResource("2_otxdw")]
+position = Vector2(4, -60)
 
 [node name="MediumObjectgs" type="Node" parent="." unique_id=1826325032]
 
-[node name="MediumObjects" parent="MediumObjectgs" unique_id=1139027103 instance=ExtResource("6_mtqcm")]
-position = Vector2(75, -349)
-shatter_threshold = 400
+[node name="MediumObjects" parent="MediumObjectgs" unique_id=1139027103 instance=ExtResource("6_24jwf")]
+position = Vector2(49, -350)
+shatter_threshold = 3
 
-[node name="MediumObjects2" parent="MediumObjectgs" unique_id=1011262113 instance=ExtResource("6_mtqcm")]
-position = Vector2(136, -346)
-shatter_threshold = 400
+[node name="MediumObjects2" parent="MediumObjectgs" unique_id=1011262113 instance=ExtResource("6_24jwf")]
+position = Vector2(150, -346)
+shatter_threshold = 3
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=834296552]
 position = Vector2(0, -222)
@@ -170,5 +157,5 @@ position = Vector2(0, -92)
 position = Vector2(106, -185)
 shape = SubResource("RectangleShape2D_wkm4t")
 
-[node name="Button" parent="." unique_id=307135624 instance=ExtResource("5_ca0bt")]
+[node name="Button" parent="." unique_id=307135624 instance=ExtResource("7_0gpoh")]
 position = Vector2(226, -47.000004)

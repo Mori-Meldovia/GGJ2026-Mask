@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_8pwfs"]
 [ext_resource type="Texture2D" uid="uid://dnklpfp48omhh" path="res://Assets/Item Sprites/banana.png" id="2_wxxgh"]
 [ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_asew7"]
-[ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="4_wxxgh"]
+[ext_resource type="PackedScene" uid="uid://pxvdcd0y6kh1" path="res://Daniel Scenes/ShatterAndAudio.tscn" id="4_wxxgh"]
 
 [node name="banana" type="RigidBody2D" unique_id=1924910213 groups=["Item"]]
 continuous_cd = 1
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_8pwfs")
-shatter_threshold = 200
+shatter_threshold = 400
 volume = 20
 metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
 
@@ -20,6 +20,4 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_wxxgh")
 script = ExtResource("3_asew7")
 
-[node name="ShatterableComponent" type="Node" parent="." unique_id=735116883]
-script = ExtResource("4_wxxgh")
-metadata/_custom_type_script = "uid://blqv7gbby7gct"
+[node name="ShatterAndAudio" parent="." unique_id=1252724261 instance=ExtResource("4_wxxgh")]

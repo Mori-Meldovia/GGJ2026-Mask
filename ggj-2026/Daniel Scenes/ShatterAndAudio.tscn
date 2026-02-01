@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://pxvdcd0y6kh1"]
+
+[ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="1_6k4uo"]
+
+[node name="ShatterAndAudio" type="Node" unique_id=1252724261]
+script = ExtResource("1_6k4uo")
+metadata/_custom_type_script = "uid://blqv7gbby7gct"

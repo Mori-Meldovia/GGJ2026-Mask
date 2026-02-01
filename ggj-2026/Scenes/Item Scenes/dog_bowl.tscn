@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_0lubn"]
 [ext_resource type="Texture2D" uid="uid://dkc7pugmp30uj" path="res://Assets/Item Sprites/dog_bowl.png" id="2_8n4fo"]
 [ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_lsnbg"]
-[ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="4_8n4fo"]
+[ext_resource type="PackedScene" uid="uid://pxvdcd0y6kh1" path="res://Daniel Scenes/ShatterAndAudio.tscn" id="4_8n4fo"]
 
 [node name="dog_bowl" type="RigidBody2D" unique_id=966269673 groups=["Item"]]
 continuous_cd = 1
@@ -19,6 +19,4 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_8n4fo")
 script = ExtResource("3_lsnbg")
 
-[node name="ShatterableComponent" type="Node" parent="." unique_id=1581525335]
-script = ExtResource("4_8n4fo")
-metadata/_custom_type_script = "uid://blqv7gbby7gct"
+[node name="ShatterAndAudio" parent="." unique_id=1252724261 instance=ExtResource("4_8n4fo")]

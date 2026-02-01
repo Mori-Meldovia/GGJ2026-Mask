@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_r24f6"]
 [ext_resource type="Texture2D" uid="uid://cdqdfyuk4tv17" path="res://Assets/Item Sprites/couch_cushy.png" id="2_np1wt"]
 [ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_rekvr"]
-[ext_resource type="Script" uid="uid://blqv7gbby7gct" path="res://Daniel Scripts/shatterable.gd" id="4_np1wt"]
+[ext_resource type="PackedScene" uid="uid://pxvdcd0y6kh1" path="res://Daniel Scenes/ShatterAndAudio.tscn" id="4_np1wt"]
 
 [node name="couch_cushy" type="RigidBody2D" unique_id=1030777912 groups=["Item"]]
 continuous_cd = 1
@@ -20,6 +20,4 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_np1wt")
 script = ExtResource("3_rekvr")
 
-[node name="ShatterableComponent" type="Node" parent="." unique_id=609528517]
-script = ExtResource("4_np1wt")
-metadata/_custom_type_script = "uid://blqv7gbby7gct"
+[node name="ShatterAndAudio" parent="." unique_id=1252724261 instance=ExtResource("4_np1wt")]
