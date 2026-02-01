@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cu3i1x5urxohg" path="res://Scripts/music_manager.gd" id="1_760hw"]
 [ext_resource type="AudioStream" uid="uid://be7jgtlbkfttn" path="res://Assets/Soundtrack/PackingPartsSoundtrack.mp3" id="2_hsxb6"]
 
-[node name="Music Manager" type="Node" unique_id=2123070553]
+[node name="Sound Manager" type="Node" unique_id=2123070553]
 script = ExtResource("1_760hw")
 
 [node name="MainSoundtrack" type="AudioStreamPlayer2D" parent="." unique_id=124097025]

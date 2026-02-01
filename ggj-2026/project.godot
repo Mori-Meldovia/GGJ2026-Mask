@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://d2hobt7qmt0ut"
 [autoload]
 
 GlobalDaniel="*uid://doo7tola0ggwh"
+LevelSelector="*uid://enyg85g7jlfw"
 
 [display]
 
