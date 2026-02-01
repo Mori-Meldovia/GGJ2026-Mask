@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://isevpx7ffhdu" path="res://Scenes/Item Scenes/lamp_floor.tscn" id="16_esggg"]
 [ext_resource type="PackedScene" uid="uid://de1w1wrptp6u8" path="res://Scenes/Item Scenes/lamp_table.tscn" id="17_nolpu"]
 [ext_resource type="PackedScene" uid="uid://dxc56hrmiln4i" path="res://Scenes/Item Scenes/mask_cowl.tscn" id="18_esggg"]
+[ext_resource type="PackedScene" uid="uid://bqkskxx8emsmj" path="res://Scenes/instructions.tscn" id="19_nolpu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgkgd"]
 texture = ExtResource("8_4iphx")
@@ -36,10 +37,11 @@ texture = ExtResource("8_4iphx")
 sources/0 = SubResource("TileSetAtlasSource_jgkgd")
 
 [node name="Main Scene" type="Node2D" unique_id=1491558032]
+position = Vector2(0, -50)
 script = ExtResource("1_esggg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1581241539]
-position = Vector2(0, -130)
+position = Vector2(0, -82)
 zoom = Vector2(2.5, 2.5)
 
 [node name="House Tile Map" type="TileMapLayer" parent="." unique_id=1641765937]
@@ -64,8 +66,8 @@ texture = ExtResource("6_2a60c")
 
 [node name="Ground" type="Sprite2D" parent="." unique_id=1245703799]
 z_index = 3
-position = Vector2(-1, 42.5)
-scale = Vector2(9.65, 2.71875)
+position = Vector2(-1, 66)
+scale = Vector2(9.65, 4.35875)
 texture = ExtResource("7_4iphx")
 
 [node name="Wall" type="Sprite2D" parent="." unique_id=496364536]
@@ -86,6 +88,7 @@ position = Vector2(218, -25)
 
 [node name="MenuUI" parent="." unique_id=1065218817 instance=ExtResource("11_rqhku")]
 visible = false
+z_index = 4096
 
 [node name="Table" parent="." unique_id=855216947 instance=ExtResource("12_cpkqv")]
 position = Vector2(288, -26)
@@ -107,3 +110,6 @@ position = Vector2(292, -76)
 
 [node name="mask_cowl" parent="." unique_id=1228879077 instance=ExtResource("18_esggg")]
 position = Vector2(183, -22)
+
+[node name="Instructions" parent="." unique_id=255754633 instance=ExtResource("19_nolpu")]
+position = Vector2(-345, -254)
