@@ -14,7 +14,6 @@ class_name DraggableRigidBody
 @onready var shatter = $ShatterableComponent if has_node("ShatterableComponent") else null
 
 
-
 func _ready() -> void:
 	gravity_scale = default_gravity_scale
 	input_pickable = true;

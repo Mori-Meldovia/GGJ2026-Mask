@@ -12,6 +12,7 @@ bounce = 0.1
 input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_ni2xo")
 gravity_scale = 1.3
+continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_ni2xo")

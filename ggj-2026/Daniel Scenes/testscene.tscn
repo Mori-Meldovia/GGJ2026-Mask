@@ -79,7 +79,7 @@ scale = Vector2(906.49976, 69.499985)
 shape = SubResource("RectangleShape2D_nw7ie")
 
 [node name="DraggableOnlyObject" parent="." unique_id=972531411 instance=ExtResource("3_y37vc")]
-position = Vector2(946, 132)
+position = Vector2(641, 340)
 
 [node name="Draggable" parent="." unique_id=841988232 instance=ExtResource("2_y37vc")]
 position = Vector2(188, 239)

@@ -10,7 +10,7 @@ func sprite_to_polygon() -> void:
 	var bitmap = BitMap.new()
 	bitmap.create_from_image_alpha(image)
 	
-	var polygons = bitmap.opaque_to_polygons(Rect2(Vector2(0, 0), bitmap.get_size()), 2.0)
+	var polygons = bitmap.opaque_to_polygons(Rect2(Vector2(0, 0), bitmap.get_size()), 2)
 	
 	for polygon in polygons:
 		var collider = CollisionPolygon2D.new()
