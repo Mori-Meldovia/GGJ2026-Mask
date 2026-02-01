@@ -23,3 +23,4 @@ func _on_button_button_down() -> void:
 			var item = scene.instantiate()
 			add_child(item)
 			box = item
+			box.set_box_position(global_position + Vector2(50, 7.5))
