@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="uid://d2hobt7qmt0ut"
 
+[autoload]
+
+GlobalDaniel="*uid://doo7tola0ggwh"
+
 [display]
 
 window/size/viewport_width=1920
