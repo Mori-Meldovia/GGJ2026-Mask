@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://ivt1a66qq1vc"]
 
-[ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_esggg"]
+[ext_resource type="Script" uid="uid://br3234qj4qpdk" path="res://Scenes/level_1.gd" id="1_esggg"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_didp7"]
+[ext_resource type="PackedScene" uid="uid://dfhxwctlns38e" path="res://Scenes/sound_manager.tscn" id="2_mcj63"]
 [ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://Scenes/world_floor.tscn" id="4_4iphx"]
 [ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_jgkgd"]
 [ext_resource type="Texture2D" uid="uid://ninjeqrdin" path="res://Assets/sky.png" id="6_2a60c"]
@@ -39,6 +40,8 @@ sources/0 = SubResource("TileSetAtlasSource_jgkgd")
 [node name="Main Scene" type="Node2D" unique_id=1491558032]
 position = Vector2(0, -50)
 script = ExtResource("1_esggg")
+
+[node name="Sound Manager" parent="." unique_id=2123070553 instance=ExtResource("2_mcj63")]
 
 [node name="MenuUI" parent="." unique_id=1065218817 instance=ExtResource("11_rqhku")]
 z_index = 4096

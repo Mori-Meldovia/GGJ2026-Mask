@@ -26,7 +26,7 @@ func _on_next_pressed() -> void:
 		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
 
 func _on_level_complete() -> void:
-	$Control/VBoxContainer/ButtonContainer/Next.icon = load("res://Assets/MenuUI/WhiteArrow.webp")
+	$Control/VBoxContainer/ButtonContainer/NextIcon.texture = load("res://Assets/MenuUI/WhiteArrow.webp")
 	LevelSelector.increase_level()
 	visible = true
 	level_complete = true

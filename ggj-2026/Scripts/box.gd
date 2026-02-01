@@ -50,6 +50,7 @@ func complete() -> void:
 func launch() -> void:
 	launching = true
 	velocity = Vector2.UP * 500
+	$BellSound.play()
 	await get_tree().create_timer(1).timeout
 	queue_free()
 	
