@@ -27,7 +27,7 @@ func connect_to_nodes() -> void:
 		input_event.connect(_on_input_event)
 
 func _physics_process(_delta: float) -> void:
-	var mouse_position = get_viewport().get_mouse_position()
+	var mouse_position = get_global_mouse_position()
 
 	if held == true:
 		#moves the thig directly to the thing
@@ -47,7 +47,7 @@ func _physics_process(_delta: float) -> void:
 func drag_physics(mouse_position) -> void:
 	var direction = (mouse_position - global_position).normalized()
 	var distance = global_position.distance_to(mouse_position)
-	
+
 	if (distance > 1.5 * GlobalDaniel.circle_size):
 		var pull = direction * (distance) * pull_force
 		linear_velocity = pull
