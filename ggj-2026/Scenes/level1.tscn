@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bti5p8qkhulhm"]
 
-[ext_resource type="Script" uid="uid://lngoe8x83om4" path="res://Scripts/ItemSpawner.gd" id="1_y4dr7"]
+[ext_resource type="Script" uid="uid://br3234qj4qpdk" path="res://Scenes/level_1.gd" id="1_esggg"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_didp7"]
 [ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://Scenes/world_floor.tscn" id="4_4iphx"]
 [ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_jgkgd"]
@@ -36,7 +36,7 @@ texture = ExtResource("8_4iphx")
 sources/0 = SubResource("TileSetAtlasSource_jgkgd")
 
 [node name="Main Scene" type="Node2D" unique_id=1491558032]
-script = ExtResource("1_y4dr7")
+script = ExtResource("1_esggg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1581241539]
 position = Vector2(0, -130)
