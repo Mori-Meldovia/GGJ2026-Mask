@@ -13,6 +13,8 @@ class_name DraggableRigidBody
 @onready var velocity: Vector2 = Vector2(0, 0)
 @onready var shatter = $ShatterableComponent if has_node("ShatterableComponent") else null
 
+@export_group("Volume")
+@export var volume = 2 
 
 func _ready() -> void:
 	gravity_scale = default_gravity_scale
@@ -72,3 +74,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if state.get_contact_count() > 0:
 		if linear_velocity.length() > shatter_threshold && shatter && !held:
 			shatter.shatter()
+			
+func get_volume():
+	return volume

@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://c367ifmdcmeun" path="res://Assets/house tilemap.png" id="8_4iphx"]
 [ext_resource type="Texture2D" uid="uid://c04sfh8teolsv" path="res://Assets/Wall.png" id="9_jgkgd"]
 [ext_resource type="Texture2D" uid="uid://bydg3c4frch1y" path="res://Assets/door.png" id="10_bs12r"]
-[ext_resource type="PackedScene" uid="uid://cnpg2pnk4maky" path="res://Daniel Scenes/draggable_only_object.tscn" id="11_rqhku"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgkgd"]
 texture = ExtResource("8_4iphx")
@@ -73,7 +72,3 @@ texture = ExtResource("9_jgkgd")
 position = Vector2(-79, -68.5)
 scale = Vector2(4.3750005, 4.2187505)
 texture = ExtResource("10_bs12r")
-
-[node name="DraggableOnlyObject" parent="." unique_id=972531411 instance=ExtResource("11_rqhku")]
-position = Vector2(-139, -239)
-rotation = -2.8274333
