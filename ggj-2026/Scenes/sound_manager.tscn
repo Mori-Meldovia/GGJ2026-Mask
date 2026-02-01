@@ -12,4 +12,12 @@ stream = ExtResource("2_hsxb6")
 autoplay = true
 bus = &"Music"
 
+[node name="ItemBreaking" type="AudioStreamPlayer2D" parent="." unique_id=975685028]
+unique_name_in_owner = true
+bus = &"SFX"
+
+[node name="BoxAssends" type="AudioStreamPlayer2D" parent="." unique_id=919245398]
+unique_name_in_owner = true
+bus = &"SFX"
+
 [connection signal="finished" from="MainSoundtrack" to="." method="_on_main_soundtrack_finished"]
