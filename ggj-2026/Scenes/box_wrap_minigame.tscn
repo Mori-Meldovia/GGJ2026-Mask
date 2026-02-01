@@ -10,6 +10,7 @@ size = Vector2(32, 32)
 z_index = 1
 scale = Vector2(7.5, 7.5)
 script = ExtResource("1_rqf83")
+tape_minigame_reference = "res://Scenes/tape.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=105027422]
 shape = SubResource("RectangleShape2D_1iikq")

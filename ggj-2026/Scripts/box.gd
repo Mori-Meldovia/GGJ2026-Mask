@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var max_capacity = 20
 @export var current_capacity = 0
-@export var box_minigame_reference = "res://box_wrap_minigame.tscn"
+@export var box_minigame_reference = "res://Scenes/box_wrap_minigame.tscn"
 var full = false
 var ready_to_go = false
 var loaded = false
