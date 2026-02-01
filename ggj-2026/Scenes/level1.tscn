@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bti5p8qkhulhm"]
 
-[ext_resource type="Script" uid="uid://br3234qj4qpdk" path="res://Scenes/level_1.gd" id="1_esggg"]
+[ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_esggg"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_didp7"]
 [ext_resource type="PackedScene" path="res://Scenes/sound_manager.tscn" id="2_mcj63"]
 [ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://Scenes/world_floor.tscn" id="4_4iphx"]
@@ -37,6 +37,9 @@ texture = ExtResource("8_4iphx")
 [sub_resource type="TileSet" id="TileSet_bs12r"]
 sources/0 = SubResource("TileSetAtlasSource_jgkgd")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcj63"]
+size = Vector2(440, 479)
+
 [node name="Main Scene" type="Node2D" unique_id=1491558032]
 position = Vector2(0, -50)
 script = ExtResource("1_esggg")
@@ -64,12 +67,21 @@ tile_set = SubResource("TileSet_bs12r")
 [node name="Box" parent="." unique_id=434375355 instance=ExtResource("2_didp7")]
 position = Vector2(-198, 10)
 
+[node name="WorldRight" type="StaticBody2D" parent="." unique_id=1412833590]
+position = Vector2(0, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldRight" unique_id=1389391117]
+position = Vector2(-604, -99)
+shape = SubResource("RectangleShape2D_mcj63")
+
 [node name="World Floor" parent="." unique_id=1814318651 instance=ExtResource("4_4iphx")]
 position = Vector2(0, 28)
 
-[node name="WorldLeftWall" parent="." unique_id=480844272 instance=ExtResource("4_4iphx")]
-position = Vector2(-386, 25)
-rotation = 1.5707964
+[node name="WorldLeftWall" type="StaticBody2D" parent="." unique_id=186530134]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLeftWall" unique_id=776780679]
+position = Vector2(603, -80)
+shape = SubResource("RectangleShape2D_mcj63")
 
 [node name="WorldRightWall" parent="." unique_id=264756296 instance=ExtResource("4_4iphx")]
 position = Vector2(387, 28)

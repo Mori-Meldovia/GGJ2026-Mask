@@ -30,7 +30,7 @@ polygon = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
 script = ExtResource("3_y03i7")
 metadata/_custom_type_script = "uid://blqv7gbby7gct"
 
-[node name="BreakingSound" type="AudioStreamPlayer2D" parent="." unique_id=1505074196]
+[node name="BreakingSound" type="AudioStreamPlayer2D" parent="ShatterableComponent" unique_id=1505074196]
 stream = ExtResource("4_51wke")
 bus = &"SFX"
 
