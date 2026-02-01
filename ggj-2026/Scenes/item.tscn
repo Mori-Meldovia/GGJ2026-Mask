@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bvmh3l7r5tsx4"]
 
-[ext_resource type="Texture2D" uid="uid://doxhqlep25o1" path="res://Assets/icon.svg" id="1_tnite"]
+[ext_resource type="Texture2D" uid="uid://cti78lbbqm666" path="res://Assets/packing_spritemap_1.png" id="2_76mu4"]
 [ext_resource type="Script" uid="uid://cx3eggyh475cq" path="res://Scripts/item.gd" id="2_ttk8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ttk8k"]
@@ -16,7 +16,10 @@ scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_ttk8k")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1161685435]
-position = Vector2(-3.5234272e-05, 2.341229e-05)
-texture = ExtResource("1_tnite")
+position = Vector2(-3.4332275e-05, 2.6226044e-05)
+scale = Vector2(8.124999, 8.125)
+texture = ExtResource("2_76mu4")
+hframes = 5
+vframes = 4
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
