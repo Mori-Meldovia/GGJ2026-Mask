@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dxc56hrmiln4i"]
+
+[ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_wh7h1"]
+[ext_resource type="Texture2D" uid="uid://cyot8t7rt3dxd" path="res://Assets/Item Sprites/mask_cowl.png" id="2_u0uvx"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_x1hxa"]
+
+[node name="mask_cowl" type="RigidBody2D" unique_id=1228879077 groups=["Item"]]
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_wh7h1")
+volume = 3
+metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=557980202 groups=["Item"]]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_u0uvx")
+script = ExtResource("3_x1hxa")

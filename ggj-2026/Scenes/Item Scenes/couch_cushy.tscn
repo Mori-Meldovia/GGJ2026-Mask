@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cm7cwtuaxj1a8"]
+
+[ext_resource type="Script" uid="uid://c8wd7wd6b60i4" path="res://Daniel Scripts/draggable.gd" id="1_r24f6"]
+[ext_resource type="Texture2D" uid="uid://cdqdfyuk4tv17" path="res://Assets/Item Sprites/couch_cushy.png" id="2_np1wt"]
+[ext_resource type="Script" uid="uid://c5thvxkk4adf5" path="res://Daniel Scripts/createCollisionPolygon.gd" id="3_rekvr"]
+
+[node name="couch_cushy" type="RigidBody2D" unique_id=1030777912 groups=["Item"]]
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_r24f6")
+volume = 10
+metadata/_custom_type_script = "uid://c8wd7wd6b60i4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1445198389 groups=["Item"]]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_np1wt")
+script = ExtResource("3_rekvr")

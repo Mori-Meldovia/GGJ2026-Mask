@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://lngoe8x83om4" path="res://Scripts/ItemSpawner.gd" id="1_y4dr7"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_didp7"]
-[ext_resource type="PackedScene" uid="uid://bvmh3l7r5tsx4" path="res://Scenes/item.tscn" id="3_2a60c"]
 [ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://Scenes/world_floor.tscn" id="4_4iphx"]
 [ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_jgkgd"]
 [ext_resource type="Texture2D" uid="uid://ninjeqrdin" path="res://Assets/sky.png" id="6_2a60c"]
@@ -10,6 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://c367ifmdcmeun" path="res://Assets/house tilemap.png" id="8_4iphx"]
 [ext_resource type="Texture2D" uid="uid://c04sfh8teolsv" path="res://Assets/Wall.png" id="9_jgkgd"]
 [ext_resource type="Texture2D" uid="uid://bydg3c4frch1y" path="res://Assets/door.png" id="10_bs12r"]
+[ext_resource type="PackedScene" uid="uid://b4pxdaxddnt4d" path="res://Scenes/Item Scenes/chair.tscn" id="10_rqhku"]
+[ext_resource type="PackedScene" uid="uid://dbptjtcsf8jfo" path="res://Scenes/menu_ui.tscn" id="11_rqhku"]
+[ext_resource type="PackedScene" uid="uid://s38ysraw4xfa" path="res://Scenes/Item Scenes/table.tscn" id="12_cpkqv"]
+[ext_resource type="PackedScene" uid="uid://beaps6c1vqh14" path="res://Scenes/Item Scenes/banana.tscn" id="13_u1b78"]
+[ext_resource type="PackedScene" uid="uid://cm7cwtuaxj1a8" path="res://Scenes/Item Scenes/couch_cushy.tscn" id="14_bdr3p"]
+[ext_resource type="PackedScene" uid="uid://fm4xaia2wihr" path="res://Scenes/Item Scenes/dog_bowl.tscn" id="15_yymuf"]
+[ext_resource type="PackedScene" uid="uid://isevpx7ffhdu" path="res://Scenes/Item Scenes/lamp_floor.tscn" id="16_esggg"]
+[ext_resource type="PackedScene" uid="uid://de1w1wrptp6u8" path="res://Scenes/Item Scenes/lamp_table.tscn" id="17_nolpu"]
+[ext_resource type="PackedScene" uid="uid://dxc56hrmiln4i" path="res://Scenes/Item Scenes/mask_cowl.tscn" id="18_esggg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgkgd"]
 texture = ExtResource("8_4iphx")
@@ -42,9 +50,6 @@ tile_set = SubResource("TileSet_bs12r")
 [node name="Box" parent="." unique_id=434375355 instance=ExtResource("2_didp7")]
 position = Vector2(-198, -21)
 
-[node name="Object" parent="." unique_id=364404651 instance=ExtResource("3_2a60c")]
-position = Vector2(59, -33)
-
 [node name="World Floor" parent="." unique_id=1814318651 instance=ExtResource("4_4iphx")]
 visible = false
 
@@ -72,3 +77,33 @@ texture = ExtResource("9_jgkgd")
 position = Vector2(-79, -68.5)
 scale = Vector2(4.3750005, 4.2187505)
 texture = ExtResource("10_bs12r")
+
+[node name="Chair" parent="." unique_id=972531411 instance=ExtResource("10_rqhku")]
+position = Vector2(360, -25)
+
+[node name="Chair2" parent="." unique_id=311161942 instance=ExtResource("10_rqhku")]
+position = Vector2(218, -25)
+
+[node name="MenuUI" parent="." unique_id=1065218817 instance=ExtResource("11_rqhku")]
+visible = false
+
+[node name="Table" parent="." unique_id=855216947 instance=ExtResource("12_cpkqv")]
+position = Vector2(288, -26)
+
+[node name="banana" parent="." unique_id=1924910213 instance=ExtResource("13_u1b78")]
+position = Vector2(-304, -36)
+
+[node name="couch_cushy" parent="." unique_id=1030777912 instance=ExtResource("14_bdr3p")]
+position = Vector2(103, -34)
+
+[node name="dog_bowl" parent="." unique_id=966269673 instance=ExtResource("15_yymuf")]
+position = Vector2(-347, -24)
+
+[node name="lamp_floor" parent="." unique_id=1948772188 instance=ExtResource("16_esggg")]
+position = Vector2(16, -48)
+
+[node name="lamp_table" parent="." unique_id=823372063 instance=ExtResource("17_nolpu")]
+position = Vector2(292, -76)
+
+[node name="mask_cowl" parent="." unique_id=1228879077 instance=ExtResource("18_esggg")]
+position = Vector2(183, -22)
