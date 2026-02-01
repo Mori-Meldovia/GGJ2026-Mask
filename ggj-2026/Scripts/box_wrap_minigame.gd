@@ -12,8 +12,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Death"):
-		queue_free()
+	#if Input.is_action_just_pressed("Death"):
+		#queue_free()
 	if tape_num <= 0:
 		box_owner.complete()
 		queue_free()

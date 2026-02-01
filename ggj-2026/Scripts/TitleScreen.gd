@@ -7,7 +7,7 @@ func _ready() -> void:
 	$SettingsMenu/SFXSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_scene.tscn")
 
 
 func _on_quit_pressed() -> void:

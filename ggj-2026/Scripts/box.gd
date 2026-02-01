@@ -10,7 +10,6 @@ var loaded = false
 var launching = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	global_position = Vector2(0, -16)
 	global_scale = Vector2(1,1)
 
 
@@ -60,4 +59,6 @@ func launch() -> void:
 	
 func get_ready():
 	return ready_to_go
-		
+
+func set_box_position(pos: Vector2):
+	global_position = pos
