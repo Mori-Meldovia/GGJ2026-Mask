@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bmktm18q2st" path="res://Assets/Fonts/Inkfree.ttf" id="1_4gxqj"]
 [ext_resource type="Script" uid="uid://cnh7hp88qjaef" path="res://Scripts/TitleScreen.gd" id="1_klylv"]
 [ext_resource type="Texture2D" uid="uid://eaqa2kr7m56b" path="res://Assets/MenuUI/titlebackground.webp" id="3_twnyg"]
-[ext_resource type="PackedScene" uid="uid://dfhxwctlns38e" path="res://Scenes/music_manager.tscn" id="4_twnyg"]
+[ext_resource type="PackedScene" uid="uid://dfhxwctlns38e" path="res://Scenes/sound_manager.tscn" id="4_twnyg"]
 
 [sub_resource type="Theme" id="Theme_55kwv"]
 default_font = ExtResource("1_4gxqj")

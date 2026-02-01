@@ -20,7 +20,14 @@ func _on_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
 
 func _on_next_pressed() -> void:
-	pass # Replace with function body.
+	if level_complete:
+		get_tree().change_scene_to_file("res://Scenes/level" + str(LevelSelector.currentLevel) + ".tscn")
 
 func _on_level_complete() -> void:
-	$Control/VBoxContainer/ButtonContainer/Next.icon = load("res://Assets/MenuUI/Menu.webp")
+	$Control/VBoxContainer/ButtonContainer/Next.icon = load("res://Assets/MenuUI/WhiteArrow.webp")
+	LevelSelector.currentLevel += 1
+	visible = true
+	level_complete = true
+
+func _on_level_failure() -> void:
+	visible = true
