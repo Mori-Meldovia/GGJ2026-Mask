@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bti5p8qkhulhm"]
+[gd_scene format=4 uid="uid://bti5p8qkhulhm"]
 
 [ext_resource type="Script" uid="uid://lngoe8x83om4" path="res://Scripts/ItemSpawner.gd" id="1_y4dr7"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_didp7"]
@@ -7,6 +7,25 @@
 [ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_jgkgd"]
 [ext_resource type="Texture2D" uid="uid://ninjeqrdin" path="res://Assets/sky.png" id="6_2a60c"]
 [ext_resource type="Texture2D" uid="uid://c7iba6silwkh6" path="res://Assets/ground.png" id="7_4iphx"]
+[ext_resource type="Texture2D" uid="uid://c367ifmdcmeun" path="res://Assets/house tilemap.png" id="8_4iphx"]
+[ext_resource type="Texture2D" uid="uid://c04sfh8teolsv" path="res://Assets/Wall.png" id="9_jgkgd"]
+[ext_resource type="Texture2D" uid="uid://bydg3c4frch1y" path="res://Assets/door.png" id="10_bs12r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgkgd"]
+texture = ExtResource("8_4iphx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bs12r"]
+sources/0 = SubResource("TileSetAtlasSource_jgkgd")
 
 [node name="Main Scene" type="Node2D" unique_id=1491558032]
 script = ExtResource("1_y4dr7")
@@ -16,7 +35,7 @@ position = Vector2(0, -130)
 zoom = Vector2(2.5, 2.5)
 
 [node name="Box" parent="." unique_id=434375355 instance=ExtResource("2_didp7")]
-position = Vector2(-204, -16)
+position = Vector2(-198, -21)
 
 [node name="Object" parent="." unique_id=364404651 instance=ExtResource("3_2a60c")]
 position = Vector2(-204, -149)
@@ -34,6 +53,22 @@ scale = Vector2(9.637501, 10.781249)
 texture = ExtResource("6_2a60c")
 
 [node name="Ground" type="Sprite2D" parent="." unique_id=1245703799]
+z_index = 3
 position = Vector2(-1, 42.5)
 scale = Vector2(9.65, 2.71875)
 texture = ExtResource("7_4iphx")
+
+[node name="House Tile Map" type="TileMapLayer" parent="." unique_id=1641765937]
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAAAP7/AAACAAIAAAABAP7/AAACAAIAAAACAP7/AAACAAIAAAADAP7/AAACAAIAAAAEAP7/AAACAAIAAAAFAP7/AAACAAIAAAAEAP3/AAACAAIAAAADAP3/AAACAAIAAAACAP3/AAACAAIAAAABAP3/AAACAAIAAAAAAP3/AAACAAIAAAAAAPz/AAACAAIAAAABAPz/AAACAAIAAAACAPz/AAACAAIAAAADAPz/AAACAAIAAAAEAPz/AAACAAIAAAAFAPz/AAACAAIAAAAFAP3/AAACAAIAAAAAAP//AAACAAMAAAABAP//AAACAAMAAAACAP//AAACAAMAAAADAP//AAACAAMAAAAEAP//AAACAAMAAAAFAP//AAACAAMAAAAAAPv/AAACAAEAAAABAPv/AAACAAEAAAACAPv/AAACAAEAAAADAPv/AAACAAEAAAAEAPv/AAACAAEAAAAFAPv/AAACAAEAAAD///r/AAAAAAAAAAAAAPr/AAABAAAAAAABAPr/AAABAAAAAAACAPr/AAABAAAAAAADAPr/AAABAAAAAAAEAPr/AAABAAAAAAAFAPr/AAABAAAAAAAGAPr/AAABAAAAAAAHAPr/AAABAAAAAAAGAPv/AAACAAEAAAAHAPv/AAACAAEAAAAGAPz/AAACAAIAAAAGAP3/AAACAAIAAAAGAP7/AAACAAIAAAAHAP7/AAACAAIAAAAHAP3/AAACAAIAAAAHAPz/AAACAAIAAAAGAP//AAACAAMAAAAHAP//AAACAAMAAAD///z/AAACAAIAAAD///3/AAACAAIAAAD///7/AAACAAIAAAD/////AAACAAMAAAD///v/AAACAAEAAAA=")
+tile_set = SubResource("TileSet_bs12r")
+
+[node name="Wall" type="Sprite2D" parent="." unique_id=496364536]
+position = Vector2(-42, -187.75)
+scale = Vector2(3, 6.593749)
+texture = ExtResource("9_jgkgd")
+
+[node name="Door" type="Sprite2D" parent="." unique_id=1618384960]
+position = Vector2(-79, -68.5)
+scale = Vector2(4.3750005, 4.2187505)
+texture = ExtResource("10_bs12r")
