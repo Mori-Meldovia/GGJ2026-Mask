@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ba7j2gox6dbgy"]
+
+[ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="1_wns2c"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_4140w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4140w"]
+size = Vector2(2492.5, 1511.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wns2c"]
+size = Vector2(2492.5, 1494.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sif5k"]
+size = Vector2(1773.5, 1182)
+
+[sub_resource type="QuadMesh" id="QuadMesh_gw76d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmwmm"]
+size = Vector2(1366, 1246)
+
+[node name="Node2D" type="Node2D" unique_id=819890504]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1488715558]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1261563747]
+position = Vector2(1012.00006, -2)
+scale = Vector2(2717, 51)
+mesh = SubResource("QuadMesh_4140w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=547759747]
+position = Vector2(1064.5, -730.625)
+shape = SubResource("RectangleShape2D_4140w")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=223565992]
+position = Vector2(2201, 1074)
+rotation = 3.1415927
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2" unique_id=1727690489]
+position = Vector2(1012.00006, -2)
+rotation = 3.1415927
+scale = Vector2(2717, 51)
+mesh = SubResource("QuadMesh_4140w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=937078921]
+position = Vector2(1064.5, -723.2501)
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_wns2c")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1473326112]
+position = Vector2(-1263, 145)
+rotation = 1.5707964
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3" unique_id=1736367493]
+position = Vector2(408.76245, -1230.1981)
+rotation = 1.5707964
+scale = Vector2(149.99551, 1164.3567)
+mesh = SubResource("QuadMesh_4140w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=758570707]
+position = Vector2(417, -418.75)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_sif5k")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=848053510]
+position = Vector2(2358, 585)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4" unique_id=335771870]
+position = Vector2(-436.00003, -41.99997)
+scale = Vector2(51.500084, 1111.9999)
+mesh = SubResource("QuadMesh_gw76d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1174109520]
+position = Vector2(221, -34)
+shape = SubResource("RectangleShape2D_rmwmm")
+
+[node name="Box" parent="." unique_id=793905182 instance=ExtResource("1_wns2c")]
+position = Vector2(238, 948)
+scale = Vector2(6, 6)

@@ -43,7 +43,10 @@ func make_fragment_corner(corner: fragment_corner) -> DraggableRigidBody:
 	if get_parent() is RigidBody2D:
 		fragment.linear_velocity = get_parent().linear_velocity
 		fragment.angular_velocity = get_parent().angular_velocity
-	
+	fragment.weight *= .5
+	fragment.volume = 5
+	fragment.global_position -= get_parent().linear_velocity.normalized()
+	fragment.add_to_group("Item")
 	fragment.add_child(fragment_sprite)
 
 	

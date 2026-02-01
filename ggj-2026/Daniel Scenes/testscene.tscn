@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bs2add048q527"]
 
-[ext_resource type="Script" uid="uid://cqvomwecam1b8" path="res://Daniel Scenes/testscene.gd" id="1_mvmji"]
+[ext_resource type="Script" uid="uid://cqvomwecam1b8" path="res://Daniel Scripts/testscene.gd" id="1_mvmji"]
 [ext_resource type="PackedScene" uid="uid://c683glngusj3a" path="res://Daniel Scenes/drag_and_shatter_object.tscn" id="2_y37vc"]
 [ext_resource type="PackedScene" uid="uid://cnpg2pnk4maky" path="res://Daniel Scenes/draggable_only_object.tscn" id="3_y37vc"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="4_v0eog"]
@@ -8,19 +8,19 @@
 [sub_resource type="QuadMesh" id="QuadMesh_pd5uf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pd5uf"]
-size = Vector2(1.0002584, 0.99932534)
+size = Vector2(1.0002584, 10.877698)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0eog"]
-size = Vector2(1.2925916, 0.99932534)
+size = Vector2(2.2537236, 8.784176)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo2ln"]
-size = Vector2(1.2862661, 0.99932534)
+size = Vector2(1.6547163, 7.6187077)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nw7ie"]
-size = Vector2(1.0002584, 0.99932534)
+size = Vector2(1.0002584, 13.646815)
 
 [node name="Node2D" type="Node2D" unique_id=135135717]
-position = Vector2(-376.99994, -398.5)
+position = Vector2(68.00009, 57.5)
 script = ExtResource("1_mvmji")
 
 [node name="Walls" type="Node" parent="." unique_id=1563118963]
@@ -30,12 +30,12 @@ position = Vector2(599, -762)
 rotation = 1.5707964
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/right wall" unique_id=76372533]
-position = Vector2(747.25, -221.75003)
+position = Vector2(1203.25, -666.75006)
 scale = Vector2(906.5, 69.5)
 mesh = SubResource("QuadMesh_pd5uf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/right wall" unique_id=1612276286]
-position = Vector2(747.133, -221.72667)
+position = Vector2(1203.1328, -1010.0002)
 scale = Vector2(906.49976, 69.499985)
 shape = SubResource("RectangleShape2D_pd5uf")
 
@@ -43,17 +43,17 @@ shape = SubResource("RectangleShape2D_pd5uf")
 position = Vector2(-948, -871)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/ceiling" unique_id=1300426012]
-position = Vector2(1152.75, 437.75)
+position = Vector2(1597.75, 893.75)
 scale = Vector2(1168.5, 69.5)
 mesh = SubResource("QuadMesh_pd5uf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/ceiling" unique_id=488518332]
-position = Vector2(1154.133, 437.7735)
+position = Vector2(1641.5, 623.25006)
 scale = Vector2(906.49976, 69.499985)
 shape = SubResource("RectangleShape2D_v0eog")
 
 [node name="floor" type="StaticBody2D" parent="Walls" unique_id=1890366434]
-position = Vector2(161, 334)
+position = Vector2(606, 790)
 rotation = -3.1415925
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/floor" unique_id=1598032246]
@@ -62,7 +62,7 @@ scale = Vector2(1166.4999, 69.5)
 mesh = SubResource("QuadMesh_pd5uf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/floor" unique_id=256397468]
-position = Vector2(-42.00009, 52.773544)
+position = Vector2(-71.99988, -177.2497)
 scale = Vector2(906.49976, 69.499985)
 shape = SubResource("RectangleShape2D_eo2ln")
 
@@ -71,12 +71,12 @@ position = Vector2(-634, -755)
 rotation = 1.5707964
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Walls/wall left" unique_id=1787497146]
-position = Vector2(747.25, -221.75003)
+position = Vector2(1203.25, -666.75006)
 scale = Vector2(906.5, 69.5)
 mesh = SubResource("QuadMesh_pd5uf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall left" unique_id=632977972]
-position = Vector2(747.133, -221.72667)
+position = Vector2(1203.1329, -227.22672)
 scale = Vector2(906.49976, 69.499985)
 shape = SubResource("RectangleShape2D_nw7ie")
 
@@ -85,9 +85,11 @@ position = Vector2(619, 198)
 
 [node name="Draggable" parent="." unique_id=841988232 instance=ExtResource("2_y37vc")]
 position = Vector2(188, 239)
+weight = 5
 
 [node name="Draggable2" parent="." unique_id=1162933894 instance=ExtResource("2_y37vc")]
 position = Vector2(360, 241)
+weight = 1
 
 [node name="Box" parent="." unique_id=793905182 instance=ExtResource("4_v0eog")]
 position = Vector2(489.99994, 469.5)

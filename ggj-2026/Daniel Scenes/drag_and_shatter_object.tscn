@@ -8,7 +8,7 @@
 friction = 0.79
 bounce = 0.1
 
-[node name="Draggable" type="RigidBody2D" unique_id=841988232]
+[node name="Draggable" type="RigidBody2D" unique_id=841988232 groups=["Item"]]
 input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_ni2xo")
 gravity_scale = 1.3
@@ -29,4 +29,5 @@ polygon = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
 script = ExtResource("3_y03i7")
 metadata/_custom_type_script = "uid://blqv7gbby7gct"
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
