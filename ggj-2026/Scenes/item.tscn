@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bvmh3l7r5tsx4"]
+
+[ext_resource type="Texture2D" uid="uid://doxhqlep25o1" path="res://Assets/icon.svg" id="1_tnite"]
+[ext_resource type="Script" uid="uid://cx3eggyh475cq" path="res://Scripts/item.gd" id="2_ttk8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttk8k"]
+size = Vector2(128.0788, 127.65774)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1515643001 groups=["Item"]]
+input_pickable = true
+script = ExtResource("2_ttk8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=884217902]
+position = Vector2(7.046855e-06, -4.6824584e-06)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_ttk8k")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1161685435]
+position = Vector2(-3.5234272e-05, 2.341229e-05)
+texture = ExtResource("1_tnite")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
