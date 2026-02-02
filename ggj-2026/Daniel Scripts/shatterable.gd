@@ -14,7 +14,9 @@ enum fragment_corner {
 @onready var sprite = get_parent().get_node("Sprite2D")
 
 func shatter() -> void:
-	
+	var scene = load("res://Scenes/breaking_sound.tscn")
+	var item = scene.instantiate()
+	get_parent().get_parent().add_child(item)
 	GlobalDaniel.num_items += 3
 	for corner in fragment_corner.values():
 		var fragment = make_fragment_corner(corner)

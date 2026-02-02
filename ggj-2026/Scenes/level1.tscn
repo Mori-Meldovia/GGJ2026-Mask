@@ -1,8 +1,8 @@
-[gd_scene format=4 uid="uid://bti5p8qkhulhm"]
+[gd_scene format=4 uid="uid://ivt1a66qq1vc"]
 
-[ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_esggg"]
+[ext_resource type="Script" uid="uid://br3234qj4qpdk" path="res://Scenes/level_1.gd" id="1_esggg"]
 [ext_resource type="PackedScene" uid="uid://diqmwo67usnx" path="res://Scenes/box.tscn" id="2_didp7"]
-[ext_resource type="PackedScene" path="res://Scenes/sound_manager.tscn" id="2_mcj63"]
+[ext_resource type="PackedScene" uid="uid://dfhxwctlns38e" path="res://Scenes/sound_manager.tscn" id="2_mcj63"]
 [ext_resource type="PackedScene" uid="uid://3exh38o8756i" path="res://Scenes/world_floor.tscn" id="4_4iphx"]
 [ext_resource type="PackedScene" uid="uid://bixrvvcdxqkab" path="res://Scenes/button.tscn" id="5_jgkgd"]
 [ext_resource type="Texture2D" uid="uid://ninjeqrdin" path="res://Assets/sky.png" id="6_2a60c"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://isevpx7ffhdu" path="res://Scenes/Item Scenes/lamp_floor.tscn" id="16_esggg"]
 [ext_resource type="PackedScene" uid="uid://de1w1wrptp6u8" path="res://Scenes/Item Scenes/lamp_table.tscn" id="17_nolpu"]
 [ext_resource type="PackedScene" uid="uid://dxc56hrmiln4i" path="res://Scenes/Item Scenes/mask_cowl.tscn" id="18_esggg"]
-[ext_resource type="PackedScene" uid="uid://bqkskxx8emsmj" path="res://Scenes/instructions.tscn" id="19_nolpu"]
+[ext_resource type="PackedScene" path="res://Scenes/instructions.tscn" id="19_nolpu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgkgd"]
 texture = ExtResource("8_4iphx")
@@ -122,7 +122,9 @@ position = Vector2(218, 6)
 position = Vector2(288, 5)
 
 [node name="banana" parent="." unique_id=1924910213 instance=ExtResource("13_u1b78")]
-position = Vector2(-304, -5)
+position = Vector2(-304, 25)
+rotation = 4.5465827
+shatter_threshold = 75
 
 [node name="couch_cushy" parent="." unique_id=1030777912 instance=ExtResource("14_bdr3p")]
 position = Vector2(103, -3)

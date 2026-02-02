@@ -113,44 +113,51 @@ mesh = SubResource("QuadMesh_gw76d")
 position = Vector2(-1298, -743)
 shape = SubResource("RectangleShape2D_rmwmm")
 
-[node name="Box3" parent="." unique_id=793905182 instance=ExtResource("2_mmf1u")]
+[node name="Box" parent="." unique_id=793905182 instance=ExtResource("2_mmf1u")]
 position = Vector2(162, -50)
 max_capacity = 10
-
-[node name="Box2" parent="." unique_id=611863760 instance=ExtResource("2_mmf1u")]
-position = Vector2(66, -62.00003)
-scale = Vector2(1.5, 1.5)
 
 [node name="Small Objects" type="Node" parent="." unique_id=112655061]
 
 [node name="banana5" parent="Small Objects" unique_id=1924910213 instance=ExtResource("6_mhlpv")]
-position = Vector2(-261, -69)
+position = Vector2(-261, -20)
+rotation = -0.82728606
+shatter_threshold = 75
 
 [node name="banana4" parent="Small Objects" unique_id=1855762031 instance=ExtResource("6_mhlpv")]
-position = Vector2(-84, -65)
+position = Vector2(-84, -20)
+rotation = -0.82728606
+shatter_threshold = 75
 
 [node name="banana" parent="Small Objects" unique_id=73889438 instance=ExtResource("6_mhlpv")]
-position = Vector2(-347, -60)
-shatter_threshold = 250
+position = Vector2(-347, -20)
+rotation = -0.82728606
+shatter_threshold = 75
 
 [node name="banana2" parent="Small Objects" unique_id=1710439317 instance=ExtResource("6_mhlpv")]
-position = Vector2(-156, -66)
+position = Vector2(-156, -20)
+rotation = -0.82728606
+shatter_threshold = 75
 
 [node name="banana3" parent="Small Objects" unique_id=1558552097 instance=ExtResource("6_mhlpv")]
-position = Vector2(-207, -68)
+position = Vector2(-207, -20)
+rotation = -0.82728606
+shatter_threshold = 75
 
 [node name="banana6" parent="Small Objects" unique_id=1368123331 instance=ExtResource("6_mhlpv")]
-position = Vector2(-296, -67)
+position = Vector2(-296, -20)
+rotation = -0.82728606
+shatter_threshold = 75
 
 [node name="MediumObjectgs" type="Node" parent="." unique_id=1826325032]
 
 [node name="MediumObjects" parent="MediumObjectgs" unique_id=1139027103 instance=ExtResource("6_mtqcm")]
 position = Vector2(75, -349)
-shatter_threshold = 400
+shatter_threshold = 150
 
 [node name="MediumObjects2" parent="MediumObjectgs" unique_id=1011262113 instance=ExtResource("6_mtqcm")]
 position = Vector2(136, -346)
-shatter_threshold = 400
+shatter_threshold = 150
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=834296552]
 position = Vector2(0, -222)

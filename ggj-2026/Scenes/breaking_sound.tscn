@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dk0h24ygt3ofo"]
+
+[ext_resource type="Script" uid="uid://kydj3jxccpmp" path="res://Scripts/breaking_sound.gd" id="1_fi1tv"]
+[ext_resource type="AudioStream" uid="uid://kv5bynklxhne" path="res://Assets/SFX/breaking.mp3" id="1_oec8c"]
+
+[node name="BreakingSound" type="AudioStreamPlayer2D" unique_id=398068830]
+stream = ExtResource("1_oec8c")
+autoplay = true
+script = ExtResource("1_fi1tv")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
